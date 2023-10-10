@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-weight: 400;
+  src: url("/fonts/ApfelGrotezk-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Joystix";
+  font-weight: 400;
+  src: url("/fonts/joystix.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-weight: 700;
+  src: url("/fonts/Apfel_Grotezk_Fett_700.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SuperLine";
+  src: url("/fonts/Superline-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SuperLine";
+  font-style: italic;
+  src: url("/fonts/Superline-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Indivisible";
+  font-weight: 300;
+  src: url("/fonts/Indivisible-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Indivisible";
+  font-weight: 400;
+  src: url("/fonts/Indivisible-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Indivisible";
+  font-weight: 600;
+  src: url("/fonts/Indivisible-SemiBold.ttf") format("truetype");
+}
+
+* {
+  font-family: Indivisible;
+  font-weight: 400;
+}
+
+html,
+body {
+  width: auto;
+  height: 100%;
+  background: linear-gradient(180deg, #141218 0%, #130b1f 100%);
+}
+
+/* Navigation */
+
+.navbar-container {
+  display: flex;
+  margin: 48px 96px 0 96px;
+  justify-content: space-between;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-right {
+  font-family: 'Joystix';
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 0, 0, 0.14);
+  background: rgba(255, 0, 0, 0.04);
+}
+
+.navbar-logo {
+  width: 64px;
+}
+
+.navbar-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  color: white;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  background: linear-gradient(114deg, #6100ff 42.5%, #2c0075 106.74%);
+  box-shadow: 0px 4px 25px 0px rgba(150, 85, 255, 0.28);
+}
+
+.navbar-middle a, .navbar-middle i {
+  text-decoration: none;
+  padding-right: 48px;
+  color: white;
+}
+
+
+/* Instructions Section */
+.instructions-header {
+  display: flex;
+  justify-content: center;
+  font-size: 144px;
+  font-family: 'joystix';
+  color: white;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.instructionsSubscribe {
+  color: white;
+  display: flex;
+  margin: 48px 88px 0 88px;
+  padding: 56px 72px;
+  border-radius: 16px;
+  border: 3px solid rgb(255 255 255 / 16%);
+  background: linear-gradient(166deg, rgba(102, 7, 255, 0.25) 26.26%, rgb(49 0 129 / 25%) 84.79%);
+  box-shadow: 0px 25px 40px 0px rgba(8, 0, 21, 0.17);
+  justify-content: space-between;
+}
+
+.SubLeft p {
+  display: flex;
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  
+  
+   /* 64px */
+  letter-spacing: -1.28px;
+}
+
+.SubLeft a {
+  left: 0;
+  justify-content: right;
+}
+
+.instructionsSubscribe a {
+  display: flex;
+  padding: 0 48px 0 48px;
+  text-decoration: none;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #FFF;
+  opacity: 0.5;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.18) 100%);
+  box-shadow: 0px 0px 14px 15px rgba(24, 0, 64, 0.31);
+}
+
+.SubLeft span {
+  font-size: 24px;
+  opacity: 0.8;
+  font-weight: 300;
+  max-width: 90%;
+  word-wrap:break-word;
+  letter-spacing: 0.2px;
+  line-height: 33px;
+}
+
+.subscribeIcon {
+  padding: 0;
+  color: black;
+}
+
+.subscribeIcon {
+    padding: 0;
+    color: white;
+    font-size: 72px;
+}
+
+.SubLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.instructionsMain {
+    margin-top: 104px;
+}
+
+.instructionsMainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 88px;
+}
+
+.instructionsLeft span {
+    color: white;
+    opacity: 0.6;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.instructionsLeft p {
+    font-size: 64px;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+.instructionsRight a {text-decoration: none;color: white;display: flex;align-items: center;justify-content: center;font-family: 'Joystix';line-height: normal;letter-spacing: -1px;}
+
+.instructionsRight {
+    padding: 16px 32px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: rgba(217, 217, 217, 0.08);
+    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+}
+
+.instructionsRight > a > i {
+  padding-left: 20px;
+}
+
+.navbar-right p {
+    color: white;
+    padding: 0 24px;
+    font-family: 'Joystix';
+    font-size: 12px;
+}
+
+.navbar-right span {
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  font-size: 24px;
+  font-family: 'Joystix';
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 0, 0, 0.14);
+}
+
+.table-container {
+  display:flex;
+  align-items: center;
+  margin: 0 88px;
+}
+
+.table {
+	width:100%;
+	border:1px solid white;
+}
+
+.table-row {
+	display:flex;
+	border: 1px white;
+	width:100%;
+	padding: 40px 0;
+	background-color: black;
+	color: white;
+	border-top: 1px solid white;
+}
+
+.table-data {
+	text-align:center;
+	flex-grow: 1;
+}
