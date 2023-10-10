@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0");
+
 
 @font-face {
   font-family: "Apfel Grotezk";
@@ -56,8 +58,10 @@
 html,
 body {
   width: auto;
-  height: 100%;
+  height: auto;
   background: linear-gradient(180deg, #141218 0%, #130b1f 100%);
+  padding: 0;
+  margin: 0;
 }
 
 /* Navigation */
@@ -197,7 +201,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 88px;
+    margin: 0 88px 40px 88px;
 }
 
 .instructionsLeft span {
@@ -205,6 +209,7 @@ body {
     opacity: 0.6;
     font-size: 20px;
     font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .instructionsLeft p {
@@ -223,6 +228,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.40);
     background: rgba(217, 217, 217, 0.08);
     box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+    justify-content: end;
 }
 
 .instructionsRight > a > i {
@@ -274,4 +280,93 @@ body {
 .table-data {
 	text-align:center;
 	flex-grow: 1;
+}
+
+.tutorialItem {
+    display: flex;
+    border-top: 1px solid #ffffff1a;
+    justify-content: space-between;
+    padding: 0 88px;
+}
+
+.tutorialLeft {
+    display: flex;
+    padding: 24px 0;
+    align-items: center;
+    border-right: 1px solid #ffffff1f;
+    width: 74%;
+    justify-content: flex-start;
+}
+
+.tutorialLeft img {
+    border-radius: 5px;
+    height: 100px;
+}
+
+.tutorialLeft p {
+    font-size: 24px;
+    margin-left: 48px;
+    font-weight: 400;
+    color: #ffffff94;
+}
+
+.tutorialRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tutorialRight a {
+    padding: 20px 32px;
+    font-size: 24px;
+    width: 280px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.07);
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tutorialRight i {
+    font-size: 40px;
+    justify-content: end;
+}
+
+.tutorialEnd {
+    border-top: 1px solid #ffffff4d;
+    background: rgb(255 255 255 / 12%);
+}
+
+.tutorialEnd .tutorialLeft {
+    border-right: 1px solid #ffffff4d;
+}
+
+.tutorialEnd p {
+    color: white;
+}
+
+.tutorialIP a {
+    border-radius: 8px;
+    border: 1px solid #00830d;
+    background: #003D06;
+}
+
+.tutorialLeft i {
+  position: absolute;
+  font-size: 48px;
+  color: white;
+  padding: 5px;
+  border-radius: 100px;
+  background: #1e072beb;
+  border: 1px solid #a751d461;
+}
+
+.tutorialLeft a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
