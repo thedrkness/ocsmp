@@ -6,6 +6,14 @@ for (i=0; i<accordion.length; i++) {
   })
 }
 
+//
+
+window.addEventListener("load", () => {
+    document.querySelector(".ipAddress").addEventListener("click", e => {
+        navigator.clipboard.writeText("39.99.3.11.02"); 
+    });
+});
+
 // Player Modal 
 
 const openModalButton = document.querySelector(".open-modal");

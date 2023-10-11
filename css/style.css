@@ -336,7 +336,8 @@ body {
 }
 
 .tutorialRight i {
-    font-size: 40px;
+    font-size: 32px;
+    padding: 5px 0;
     justify-content: end;
 }
 
@@ -358,6 +359,7 @@ body {
     border-radius: 8px;
     border: 1px solid #00830d;
     background: #003D06;
+    cursor:pointer;
 }
 
 .tutorialLeft i {
@@ -572,12 +574,13 @@ body {
     align-items: center;
 }
 
-.wmStream img {
+.wmStream iframe {
+  height: 745px;
+  margin: 24px 126px;
   border-radius: 16px;
   border: 1px solid #424242;
   width: 100%;
   opacity: 0.8;
-  margin: 24px 126px;
   box-shadow: 0px 27px 19px 0px rgba(0, 0, 0, 0.17);
 }
 
@@ -607,7 +610,7 @@ body {
     display: flex;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.17);
-    padding: 18px 0 18px 20px;
+    padding: 18px 0 18px 32px;
     font-size: 16px;
     color: white;
 }
