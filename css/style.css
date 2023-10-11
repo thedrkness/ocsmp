@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,1,0");
 
 
 @font-face {
@@ -92,21 +92,19 @@ body {
 }
 
 .navbar-middle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 12%;
-  color: white;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background: linear-gradient(114deg, #6100ff 42.5%, #2c0075 106.74%);
   box-shadow: 0px 4px 25px 0px rgba(150, 85, 255, 0.28);
 }
 
-.navbar-middle a, .navbar-middle i {
+.navbar-middle a {
   text-decoration: none;
-  padding-right: 48px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 
@@ -129,7 +127,7 @@ body {
   color: white;
   display: flex;
   margin: 48px 88px 0 88px;
-  padding: 56px 72px;
+  padding: 56px 64px;
   border-radius: 16px;
   border: 3px solid rgb(255 255 255 / 16%);
   background: linear-gradient(166deg, rgba(102, 7, 255, 0.25) 26.26%, rgb(49 0 129 / 25%) 84.79%);
@@ -139,7 +137,7 @@ body {
 
 .SubLeft p {
   display: flex;
-  font-size: 60px;
+  font-size: 56px;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 500;
@@ -156,7 +154,7 @@ body {
 
 .instructionsSubscribe a {
   display: flex;
-  padding: 0 48px 0 48px;
+  padding: 0 56px 0 56px;
   text-decoration: none;
   align-items: center;
   border-radius: 16px;
@@ -173,7 +171,7 @@ body {
   max-width: 90%;
   word-wrap:break-word;
   letter-spacing: 0.2px;
-  line-height: 33px;
+  line-height: 34px;
 }
 
 .subscribeIcon {
@@ -299,7 +297,7 @@ body {
 }
 
 .tutorialLeft img {
-    border-radius: 5px;
+    border-radius: 8px;
     height: 100px;
 }
 
@@ -338,6 +336,7 @@ body {
 
 .tutorialEnd {
     border-top: 1px solid #ffffff4d;
+    border-bottom: 1px solid #ffffff4d;
     background: rgb(255 255 255 / 12%);
 }
 
@@ -357,16 +356,286 @@ body {
 
 .tutorialLeft i {
   position: absolute;
-  font-size: 48px;
+  font-size: 40px;
   color: white;
   padding: 5px;
   border-radius: 100px;
   background: #1e072beb;
   border: 1px solid #a751d461;
+  display: none;
+	transition: all 0.3s ease-in-out;
 }
 
 .tutorialLeft a {
   display: flex;
   justify-content: center;
   align-items: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.tutorialLeft > a:hover i {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+.tutorialHelp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #ffffff96;
+}
+
+.tutorialHelp span {color: white;padding-left: 5px;}
+
+.tutorialHelp a {
+  color: white;
+  font-weight: bold;
+}
+
+
+/* RULES */
+
+.accordionItem {
+  border-radius: 10px;
+  margin: 18px 0;
+  border: 2px solid rgb(255 255 255 / 31%);
+  background: rgb(217 217 217 / 11%);
+}
+
+.rulesAccordion {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0 126px 0 126px;
+}
+
+.rulesHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 144px;
+  font-family: 'joystix';
+  color: white;
+  margin: 104px 0 48px 0;
+}
+
+.accordionTitle {
+  position: relative;
+  padding: 0  40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.accordionItem > .accordionTitle:after{
+  font-family: "Material Symbols Rounded";
+  content: "keyboard_arrow_up";
+  font-size: 82px;
+  color: white;
+  opacity: 0.5;
+}
+
+.accordionItem.is-open > .accordionTitle:after {
+  content: "keyboard_arrow_down";
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordionContent {
+  height:0;
+  margin: 0 40px 0 40px;
+  overflow:hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordionItem.is-open .accordionContent {
+  height: 100%;
+  margin: 24px 40px 40px 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordionContent p:first-of-type {
+  margin-top: 0;
+}
+
+.accordionTitle p, .accordionTitle span {
+    inline-size: 70%;
+    overflow-wrap: break-word;
+    font-family: 'Joystix';
+    font-size: 24px;
+    line-height: 138%;
+    color: #ffffffd9;
+    margin: 32px 0;
+    letter-spacing: -0.3px;
+}
+
+.accordionTitle span {
+    color: #ff2424;
+}
+
+.accordionItem.is-open .accordionContent p {
+    opacity: 1;
+    overflow: visible;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordionContent p {
+    font-size: 22px;
+    opacity: 0;
+    display: flex;
+    margin-top: 40px;
+    font-weight: 100;
+    margin-bottom: 0;
+    color: white;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordionContent p > img {
+  margin-right: 16px;
+}
+
+.accordionLeft {
+  margin-right: 16px;
+}
+
+
+/* Watching Livestreams */
+
+.watchingHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 144px;
+    font-family: 'joystix';
+    color: white;
+    margin: 104px 0 48px 0;
+    text-align: center;
+}
+
+.wmHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 126px;
+    align-items: center;
+}
+
+.wmLeft > p {
+    font-family: 'superline';
+    font-size: 96px;
+    margin: 0;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 95%;
+}
+
+.wmLeft span {
+    color: white;
+    font-family: 'Superline';
+    font-size: 32px;
+    font-style: italic;
+    margin: 0;
+    opacity: .5;
+    letter-spacing: 0.8px;
+}
+
+.wmRight {
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    opacity: 0.8;
+    background: rgba(255, 0, 0, 0.26);
+}
+
+.wmRight a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Joystix';
+  height: 56px;
+  width: 200px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.wmStream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wmStream img {
+  border-radius: 16px;
+  border: 1px solid #424242;
+  width: 100%;
+  opacity: 0.8;
+  margin: 24px 126px;
+  box-shadow: 0px 27px 19px 0px rgba(0, 0, 0, 0.17);
+}
+
+.watchingTable {
+  margin: 40px 126px;
+}
+.watchingTableHead {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    padding: 0 20px 16px 20px;
+}
+
+.watchingTableHead p {
+    display: flex;
+    flex: 1;
+    color: #FFF;
+    font-family: Joystix;
+    font-size: 18px;
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+}
+
+.watchingTableItems {display: flex;flex-direction: column;}
+
+.watchingTableItem {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
+    padding: 18px 0 18px 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.watchingTableItem p, .watchingTableItem a {
+    flex: 1;
+    font-family: 'Joystix';
+}
+
+.watchingTableItem a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-family: 'Joystix';
+    height: 56px;
+    font-size: 16px;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    opacity: 0.8;
+    background: rgb(57 57 57 / 26%);
+    justify-content: space-around;
+}
+
+.notLive a {
+    opacity: 0.5;
+    background: none;
+}
+
+.notLive p {
+    opacity: 0.3;
 }
