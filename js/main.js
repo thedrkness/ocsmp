@@ -16,19 +16,75 @@ window.addEventListener("load", () => {
 
 // Player Modal 
 
-const openModalButton = document.querySelector(".open-modal");
-const modal = document.querySelector(".video-modal");
-const video = document.querySelector(".video-modal video");
+const openModalButton1 = document.querySelector(".open-modal1");
+const openModalButton2 = document.querySelector(".open-modal2");
+const openModalButton3 = document.querySelector(".open-modal3");
+const openModalButton4 = document.querySelector(".open-modal4");
+const openModalButton5 = document.querySelector(".open-modal5");
 
-openModalButton.addEventListener("click", function onOpen() {
-  modal.showModal();
-  video.play();
+
+const modal1 = document.querySelector(".video-modal1");
+const video1 = document.querySelector(".video-modal1 video");
+
+const modal2 = document.querySelector(".video-modal2");
+const video2 = document.querySelector(".video-modal2 video");
+
+const modal3 = document.querySelector(".video-modal3");
+const video3 = document.querySelector(".video-modal3 video");
+
+const modal4 = document.querySelector(".video-modal4");
+const video4 = document.querySelector(".video-modal4 video");
+
+const modal5 = document.querySelector(".video-modal5");
+const video5 = document.querySelector(".video-modal5 video");
+
+openModalButton1.addEventListener("click", function onOpen() {
+  modal1.showModal();
+  video1.play();
+
+  modal1.addEventListener("close", function onClose() {
+    video1.pause();
+  });
 });
 
-modal.addEventListener("close", function onClose() {
-  video.pause();
+openModalButton2.addEventListener("click", function onOpen() {
+  modal2.showModal();
+  video2.play();
+
+  modal2.addEventListener("close", function onClose() {
+    video2.pause();
+  });
 });
 
+openModalButton3.addEventListener("click", function onOpen() {
+    modal3.showModal();
+    video3.play();
+  
+    modal3.addEventListener("close", function onClose() {
+      video3.pause();
+    });
+});
+  
+
+openModalButton4.addEventListener("click", function onOpen() {
+  modal4.showModal();
+  video4.play();
+
+  modal4.addEventListener("close", function onClose() {
+    video4.pause();
+  });
+  
+});
+
+openModalButton5.addEventListener("click", function onOpen() {
+  modal5.showModal();
+  video5.play();
+
+  modal5.addEventListener("close", function onClose() {
+    video5.pause();
+  });
+  
+});
 
 // Player Count
 

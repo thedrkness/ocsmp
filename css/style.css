@@ -59,8 +59,9 @@ html,
 body {
   width: auto;
   height: auto;
-  background: linear-gradient(180deg, #141218 0%, #130b1f 100%);
+  background: linear-gradient(180deg, #141218 0%, #201234 100%);
   padding: 0;
+  overflow-x:hidden;
   margin: 0;
   z-index: -1;
   position: relative;
@@ -70,7 +71,7 @@ body {
 
 .navbar-container {
   display: flex;
-  margin: 48px 96px 0 96px;
+  margin: 48px 88px 0 88px;
   justify-content: space-between;
   z-index: 1;
   position: relative;
@@ -96,11 +97,13 @@ body {
 }
 
 .navbar-middle {
-  width: 12%;
   border-radius: 100px;
+  opacity: 0.85;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background: linear-gradient(114deg, #6100ff 42.5%, #2c0075 106.74%);
-  box-shadow: 0px 4px 25px 0px rgba(150, 85, 255, 0.28);
+  box-shadow: none;
+  display: flex;
+  transition: all 0.4s ease-in-out;
 }
 
 .navbar-middle a {
@@ -109,6 +112,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 230px;
 }
 
 
@@ -119,12 +123,12 @@ body {
   font-size: 144px;
   font-family: 'joystix';
   color: white;
+  margin: 64px 0;
 }
 
 .instructions-container {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
   z-index: 1;
   position: relative;
 }
@@ -132,13 +136,15 @@ body {
 .instructionsSubscribe {
   color: white;
   display: flex;
-  margin: 48px 88px 0 88px;
+  margin: 0 88px 0 88px;
   padding: 56px 64px;
   border-radius: 16px;
+  opacity: 1;
   border: 3px solid rgb(255 255 255 / 16%);
-  background: linear-gradient(166deg, rgba(102, 7, 255, 0.25) 26.26%, rgb(49 0 129 / 25%) 84.79%);
+  background: linear-gradient(140deg, rgb(103 8 255 / 71%) 26.26%, rgb(56 0 147 / 83%) 84.79%);
   box-shadow: 0px 25px 40px 0px rgba(8, 0, 21, 0.17);
   justify-content: space-between;
+  transition: all .4s ease-in-out;
 }
 
 .SubLeft p {
@@ -167,7 +173,8 @@ body {
   border: 1px solid #FFF;
   opacity: 0.5;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.18) 100%);
-  box-shadow: 0px 0px 14px 15px rgba(24, 0, 64, 0.31);
+  box-shadow: none;
+  transition: all .4s ease-in-out;
 }
 
 .SubLeft span {
@@ -212,7 +219,7 @@ body {
     color: white;
     opacity: 0.6;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.3px;
 }
 
@@ -224,10 +231,11 @@ body {
 }
 
 
-.instructionsRight a {text-decoration: none;color: white;display: flex;align-items: center;justify-content: center;font-family: 'Joystix';line-height: normal;letter-spacing: -1px;}
+.instructionsRight a {text-decoration: none;color: white;display: flex;align-items: center;justify-content: center;font-family: 'Joystix';line-height: normal;letter-spacing: -0.4px;}
 
 .instructionsRight {
-    padding: 16px 32px;
+    padding: 16px 0;
+    width: 240px;
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.40);
     background: rgba(217, 217, 217, 0.08);
@@ -257,7 +265,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: rgba(255, 0, 0, 0.14);
+  background: rgb(255 0 0 / 43%);
 }
 
 .table-container {
@@ -298,7 +306,7 @@ body {
     padding: 24px 0;
     align-items: center;
     border-right: 1px solid #ffffff1f;
-    width: 74%;
+    width: 76%;
     justify-content: flex-start;
 }
 
@@ -307,11 +315,14 @@ body {
     height: 110px;
 }
 
-.tutorialLeft p {
-    font-size: 24px;
+.tutorialLeft > p {
+    font-size: 26px;
     margin-left: 48px;
+    width: 74%;
+    line-height: 134%;
     font-weight: 400;
     color: #ffffff94;
+    letter-spacing: 0.2px;
 }
 
 .tutorialRight {
@@ -333,6 +344,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .tutorialRight i {
@@ -362,10 +374,10 @@ body {
     cursor:pointer;
 }
 
-.tutorialLeft i {
-  font-size: 60px;
+.tutorialLeft a > i {
+  font-size: 56px;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   padding: 0;
   color: white;
   transition: all 0.3s ease-in-out;
@@ -375,8 +387,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
   flex-direction: column;
+  border: 2px solid #ffffff00;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
 }
 
 .tutorialLeft > a:hover i {
@@ -669,7 +684,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   backdrop-filter: blur(15px);
 }
 
-.video-modal-close {
+.video-modal-close-global {
     background: #212121;
     border: 1px solid #656565;
     color: white;
@@ -687,15 +702,28 @@ video {
 
 .backgroundcircle {
     z-index: -1;
-    position: relative;
+    position: absolute;
 }
 
-.backgroundcircle img {
+#circle1 {
     position: absolute;
-    width: 1000px;
-    animation: animate 25s linear infinite;
-    bottom: 456px;
-    left: 25%;
+    width: 1397px;
+    bottom: 5px;
+    left: 13%;
+}
+
+#circle2 {
+    position: absolute;
+    width: 1320px;
+    bottom: 5394px;
+    left: -20%;
+}
+
+#circle3 {
+    position: absolute;
+    width: 1320px;
+    bottom: 703px;
+    left: 0%;
 }
 
 .navbar-container, .rules-container, .instructions-container, .watching-container {
@@ -706,9 +734,200 @@ video {
 .tutorialLeft a > p {
     margin: 0;
     margin-top: 32px;
-    text-decoration: underline;
 }
 
 .tutorialLeft a > i, .tutorialLeft a > p {
     position: absolute;
+}
+
+/* Hover */
+
+.navbar-middle:hover {
+  opacity: 1;
+  box-shadow: 0px 4px 25px 0px rgba(150, 85, 255, 0.28);
+  transition: all .4s ease-in-out;
+}
+
+.tutorialRight a:hover {
+  opacity: 1;
+  background: rgb(255 255 255 / 13%);
+  border: 1px solid rgb(255 255 255 / 57%);
+  transition: all 0.3s ease-in-out;
+}
+
+.instructionsSubscribe a:hover {
+    box-shadow: 0px 0px 33px 27px rgba(24, 0, 64, 0.31);
+    opacity: 1;
+    transition: all .4s ease-in-out;
+}
+
+.tutorialLeft a > p {
+    color: white;
+    margin-top: 40px;
+}
+
+.tutorialLeft a:hover {
+    opacity:1;
+    border: 2px solid #ffffff42;
+    border-radius:8px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 1620px) {
+  .tutorialLeft {
+    width: 60%;
+  }
+  .instructions-header, .rulesHeader, .watchingHeader {
+    font-size:100px;
+  }
+  .backgroundcircle{
+    display: none;
+  }
+  .tutorialLeft > p {
+    font-size:20px;
+    font-weight:300;
+  }
+
+  .watchingTableItem a, .watchingTableHead p:last-of-type {
+    flex: 1 1 150px;
+  }
+
+  .watchingTable {
+    margin:40px 88px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .watchingTableItem a, .watchingTableHead p:last-of-type {
+    flex: 1 1 400px!important;
+  }
+  .watchingTable {
+    margin: 40px 40px!important;
+  }
+  .wmStream iframe {
+    margin: 24px 40px!important;
+  }
+  .wmHeader {
+    margin:0 40px;
+  }
+  .rulesAccordion {
+    flex-direction:column;
+    padding: 0 40px;
+  }
+  .accordionLeft {
+    margin-right:0;
+  }
+  .accordionRight .accordionItem:first-of-type {
+    margin-top:0;
+  }
+  .tutorialItem {
+    padding:0 40px;
+  }
+  .instructionsMainHeader {
+    margin: 0 40px 40px 40px;
+  }
+  .instructionsSubscribe {
+    margin: 0 40px 0 40px;
+  }
+  .SubLeft span {
+    font-size: 20px;
+    max-width:85%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wmStream iframe {
+    width:100%;
+    height:600px;
+  }
+  .accordionTitle p, .accordionTitle span {
+    inline-size:100%;
+  }
+  video {
+    width:100%;
+  }
+  dialog {
+    max-width:fit-content;
+  }
+  .instructions-header, .rulesHeader, .watchingHeader {
+    font-size:72px!important;
+  }
+  .instructionsSubscribe {
+    flex-direction:column;
+  }
+  .instructionsSubscribe a {
+    justify-content: center;
+    padding:0;
+    margin-top: 32px;
+  }
+  .tutorialItem {
+    flex-direction:column;
+  }
+  .tutorialLeft {
+    border:none;
+    width:100%!important;
+  }
+  .tutorialRight a {
+    width:100%;
+    margin:16px 0 40px 0;
+  }
+  .instructionsMainHeader {
+    flex-wrap:wrap;
+  }
+  .instructionsRight {
+    width:100%;
+    margin-top:24px;
+  }
+}
+
+@media (max-width: 750px) {
+  .instructions-header, .rulesHeader, .watchingHeader {
+    font-size:56px!important;
+  }
+  .instructionsSubscribe {
+    padding: 48px 40px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .accordionTitle p, .accordionTitle span {
+    font-size:20px;
+  }
+  .instructions-header, .rulesHeader, .watchingHeader {
+    font-size:40px!important;
+  }
+  .SubLeft span {
+    max-width:100%!important;
+  }
+  .tutorialLeft {
+    flex-direction: column;
+  }
+  .tutorialLeft > p {
+    margin-left:0;
+    width:100%;
+  }
+  .tutorialLeft img {
+    width:100%;
+    height:auto;
+    margin-top:16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .instructions-header, .rulesHeader, .watchingHeader {
+    font-size:32px!important;
+  }
+
+  .SubLeft p {
+    font-size: 40px;
+  }
+
+  .SubLeft span {
+    font-size:18px!important;
+  }
 }

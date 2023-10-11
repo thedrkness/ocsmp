@@ -41,15 +41,15 @@
             <span>After Subscribing</span>
             <p>How to join the server</p>
           </div>
-          <div class="instructionsRight open-modal">
+          <div class="instructionsRight open-modal1">
             <a>Watch Tutorial</a>
 
-            <dialog class="video-modal">
+            <dialog class="video-modal1">
               <form method="dialog">
-                <button class="video-modal-close"><i class="material-icons">close</i></button>
+                <button class="video-modal-close-global"><i class="material-icons">close</i></button>
               </form>
               <video controls width="1080">
-                <source src="/assets/1.mp4" type="video/mp4" />
+                <source src="/assets/all.mp4" type="video/mp4" />
               </video>
             </dialog>
 
@@ -59,25 +59,37 @@
         <div class="tutorialContainer">
           <div class="tutorialItem">
             <div class="tutorialLeft">
-              <a href="/">
-                <i class="material-symbols-rounded">play_arrow</i>
-                <p>Watch</p>
-                <img src="/assets/img.jpg" alt="">
-              </a>
+
+              <div class="open-modal2">
+                <a>
+                  <i class="material-symbols-rounded">play_arrow</i>
+                  <p>Watch</p>
+                  <img src="/assets/img1.png" alt="">
+                </a>
+                <dialog class="video-modal2">
+                  <form method="dialog">
+                    <button class="video-modal-close-global"><i class="material-icons">close</i></button>
+                  </form>
+                  <video controls width="1080">
+                    <source src="/assets/1.mp4" type="video/mp4" />
+                  </video>
+                </dialog>
+              </div>
+
               <p>Go into the sub-only discord channel #whitelist-me and enter your Minecraft ID to be whitelisted.</p>
             </div>
             <div class="tutorialRight">
-              <a href="/">Discord Server <i class="material-icons">arrow_outward</i></a>
+              <a href="https://discord.gg/K398SxXC">Discord Server <i class="material-icons">arrow_outward</i></a>
             </div>
           </div>
 
           <div class="tutorialItem">
             <div class="tutorialLeft">
-              <a href="/">
-                <i class="material-symbols-rounded">play_arrow</i>
-                <p>Watch</p>
-                <img src="/assets/img.jpg" alt="">
-              </a>
+
+                <a>
+                  <img src="/assets/img2.png" alt="">
+                </a>
+                
               <p>The easiest way to join the server is through the download of CurseForge.</p>
             </div>
             <div class="tutorialRight">
@@ -87,23 +99,45 @@
 
           <div class="tutorialItem">
             <div class="tutorialLeft">
-              <a href="/">
-                <i class="material-symbols-rounded">play_arrow</i>
-                <p>Watch</p>
-                <img src="/assets/img.jpg" alt="">
-              </a>
-              <p>After downloading, create a custom profile & copy the settings in the image shown.</p>
+              
+              <div class="open-modal3">
+                <a>
+                  <i class="material-symbols-rounded">play_arrow</i>
+                  <p>Watch</p>
+                  <img src="/assets/img3.png" alt="">
+                </a>
+                <dialog class="video-modal3">
+                  <form method="dialog">
+                    <button class="video-modal-close-global"><i class="material-icons">close</i></button>
+                  </form>
+                  <video controls width="1080">
+                    <source src="/assets/3.mp4" type="video/mp4" />
+                  </video>
+                </dialog>
+              </div>
+
+              <p>After downloading, create a custom profile on CurseForge & copy the settings in the video shown.</p>
             </div>
             <div class="tutorialRight"></div>
           </div>
 
           <div class="tutorialItem">
             <div class="tutorialLeft">
-              <a href="/">
-                <i class="material-symbols-rounded">play_arrow</i>
-                <p>Watch</p>
-                <img src="/assets/img.jpg" alt="">
-              </a>
+              <div class="open-modal4">
+                <a>
+                  <i class="material-symbols-rounded">play_arrow</i>
+                  <p>Watch</p>
+                  <img src="/assets/img4.png" alt="">
+                </a>
+                <dialog class="video-modal4">
+                  <form method="dialog">
+                    <button class="video-modal-close-global"><i class="material-icons">close</i></button>
+                  </form>
+                  <video controls width="1080">
+                    <source src="/assets/4.mp4" type="video/mp4" />
+                  </video>
+                </dialog>
+              </div>
               <p>Click the 3 dots next to the profile and click “Add More Content”. Then search & install “Simple Voice Chat”.</p>
             </div>
             <div class="tutorialRight"></div>
@@ -111,11 +145,21 @@
 
           <div class="tutorialItem tutorialEnd">
             <div class="tutorialLeft">
-              <a href="/">
-                <i class="material-symbols-rounded">play_arrow</i>
-                <p>Watch</p>
-                <img src="/assets/img.jpg" alt="">
-              </a>
+              <div class="open-modal5">
+                <a>
+                  <i class="material-symbols-rounded">play_arrow</i>
+                  <p>Watch</p>
+                  <img src="/assets/img5.png" alt="">
+                </a>
+                <dialog class="video-modal5">
+                  <form method="dialog">
+                    <button class="video-modal-close-global"><i class="material-icons">close</i></button>
+                  </form>
+                  <video controls width="1080">
+                    <source src="/assets/5.mp4" type="video/mp4" />
+                  </video>
+                </dialog>
+              </div>
               <p>Launch Minecraft through CurseForge, head to the "Server Address" tab, enter the IP address & click “Done”.</p>
             </div>
             <div class="tutorialRight tutorialIP">
@@ -235,7 +279,9 @@
     </div>
 
     <div class="backgroundcircle">
-      <img src="/assets/backgroundCircle.svg" alt="">
+      <img id="circle1" src="/assets/backgroundCircle.svg" alt="">
+      <img id="circle2" src="/assets/backgroundCircle.svg" alt="">
+      <img id="circle3" src="/assets/backgroundCircle.svg" alt="">
     </div>
   </body>
   <script src="/js/main.js"></script>
