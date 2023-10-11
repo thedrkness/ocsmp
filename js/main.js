@@ -5,3 +5,83 @@ for (i=0; i<accordion.length; i++) {
     this.classList.toggle('is-open')
   })
 }
+
+// Player Modal 
+
+const openModalButton = document.querySelector(".open-modal");
+const modal = document.querySelector(".video-modal");
+const video = document.querySelector(".video-modal video");
+
+openModalButton.addEventListener("click", function onOpen() {
+  modal.showModal();
+  video.play();
+});
+
+modal.addEventListener("close", function onClose() {
+  video.pause();
+});
+
+
+// Player Count
+
+// function initServerData(serverIp, serverPort){
+//     fetch('https://mcapi.us/server/status?ip='+ serverIp + '&port=' + serverPort)
+//     .then(response => response.json())
+//     .then(data => handleServerStatus(data));
+
+//     function handleServerStatus(data){
+//         if(data.status=='error'){
+//             console.log(data.error);
+//             return false;
+//         }
+
+//         const playerCounter = document.getElementById("playerCount");
+//         playerCounter.innerHTML = data.players.now;
+
+//         console.log(data.players.now)
+//     } 
+// }
+
+// initServerData("92.119.148.8", "25565");
+
+
+//
+async function data(){
+    try {
+        const streams = await fetch('http://localhost:4000/streams')
+            .then(res => res.json())
+    
+        for(const stream of streams.online) {
+            console.log(stream);
+            watchingTableItems.insertAdjacentHTML(
+                'beforeend',
+                `<div class="watchingTableItem">
+                    <p><img src="/" alt=""> ${stream.user_name}</p>
+                    <p>${stream.type}</p>
+                    <p>${stream.viewer_count}</p>
+                    <a href="https://twitch.tv/${stream.user_name}">Visit Channel <i class="material-icons">arrow_outward</i></a>
+                </div>`
+            )
+        }
+
+        for(const stream of streams.offline) {
+            console.log(stream);
+            watchingTableItems.insertAdjacentHTML(
+                'beforeend',
+                `<div class="watchingTableItem notLive">
+                    <p><img src="/" alt=""> ${stream.display_name}</p>
+                    <p>Not Live</p>
+                    <p>N/A</p>
+                    <a href="https://twitch.tv/${stream.display_name}">Visit Channel <i class="material-icons">arrow_outward</i></a>
+                </div>`
+            )
+        }
+            
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const watchingTableItems = document.querySelector(".watchingTableItems");
+
+data();

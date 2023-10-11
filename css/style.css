@@ -62,6 +62,8 @@ body {
   background: linear-gradient(180deg, #141218 0%, #130b1f 100%);
   padding: 0;
   margin: 0;
+  z-index: -1;
+  position: relative;
 }
 
 /* Navigation */
@@ -70,6 +72,8 @@ body {
   display: flex;
   margin: 48px 96px 0 96px;
   justify-content: space-between;
+  z-index: 1;
+  position: relative;
 }
 
 .navbar-header {
@@ -121,6 +125,8 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+  z-index: 1;
+  position: relative;
 }
 
 .instructionsSubscribe {
@@ -226,7 +232,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.40);
     background: rgba(217, 217, 217, 0.08);
     box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
-    justify-content: end;
+    cursor: pointer;
 }
 
 .instructionsRight > a > i {
@@ -298,7 +304,7 @@ body {
 
 .tutorialLeft img {
     border-radius: 8px;
-    height: 100px;
+    height: 110px;
 }
 
 .tutorialLeft p {
@@ -355,22 +361,20 @@ body {
 }
 
 .tutorialLeft i {
-  position: absolute;
-  font-size: 40px;
+  font-size: 60px;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
   color: white;
-  padding: 5px;
-  border-radius: 100px;
-  background: #1e072beb;
-  border: 1px solid #a751d461;
-  display: none;
-	transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .tutorialLeft a {
   display: flex;
   justify-content: center;
   align-items: center;
-	transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  flex-direction: column;
 }
 
 .tutorialLeft > a:hover i {
@@ -582,21 +586,18 @@ body {
 }
 .watchingTableHead {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-bottom: 8px;
-    padding: 0 20px 16px 20px;
+    padding: 0 20px 16px 32px;
 }
 
 .watchingTableHead p {
     display: flex;
-    flex: 1;
     color: #FFF;
+    flex: 1 1 200px;
     font-family: Joystix;
-    font-size: 18px;
+    font-size: 16px;
     opacity: 0.8;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     letter-spacing: -0.24px;
 }
 
@@ -612,7 +613,6 @@ body {
 }
 
 .watchingTableItem p, .watchingTableItem a {
-    flex: 1;
     font-family: 'Joystix';
 }
 
@@ -638,4 +638,74 @@ body {
 
 .notLive p {
     opacity: 0.3;
+}
+
+.watchingTableItem p {
+    flex: 1 1 200px;
+}
+
+.watchingTableItem a {
+    flex: 1 1 55px;
+}
+
+.watchingTableHead p:last-of-type {
+    flex: 1 1 55px;
+}
+
+dialog {
+  width: 100%;
+  max-width: 1080px;
+  background: #000000b5;
+  border: none;
+  box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+  background: rgba(0, 0, 0, 0.274);
+  backdrop-filter: blur(15px);
+}
+
+.video-modal-close {
+    background: #212121;
+    border: 1px solid #656565;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+video {
+    border-radius: 12px;
+}
+
+.backgroundcircle {
+    z-index: -1;
+    position: relative;
+}
+
+.backgroundcircle img {
+    position: absolute;
+    width: 1000px;
+    animation: animate 25s linear infinite;
+    bottom: 456px;
+    left: 25%;
+}
+
+.navbar-container, .rules-container, .instructions-container, .watching-container {
+    z-index: 0;
+    position: relative;
+}
+
+.tutorialLeft a > p {
+    margin: 0;
+    margin-top: 32px;
+    text-decoration: underline;
+}
+
+.tutorialLeft a > i, .tutorialLeft a > p {
+    position: absolute;
 }
