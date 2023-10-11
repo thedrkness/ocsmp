@@ -640,6 +640,7 @@ body {
     color: white;
     font-family: 'Joystix';
     height: 56px;
+    padding: 0 20px;
     font-size: 16px;
     align-items: center;
     border-radius: 100px;
@@ -650,8 +651,16 @@ body {
 }
 
 .notLive a {
-    opacity: 0.5;
+    opacity: 0.3;
     background: none;
+}
+
+.watchingTableItem a > i {
+    display: flex;
+}
+
+.watchingTableItem a > p {
+    opacity: 1;
 }
 
 .notLive p {
@@ -709,7 +718,7 @@ video {
     position: absolute;
     width: 1397px;
     bottom: 5px;
-    left: 13%;
+    left: 250px;
 }
 
 #circle2 {
@@ -721,9 +730,9 @@ video {
 
 #circle3 {
     position: absolute;
-    width: 1320px;
-    bottom: 703px;
-    left: 0%;
+    width: 1744px;
+    bottom: 1926px;
+    left: 117px;
 }
 
 .navbar-container, .rules-container, .instructions-container, .watching-container {
@@ -867,7 +876,7 @@ video {
   .tutorialItem {
     flex-direction:column;
   }
-  .tutorialLeft {
+  .tutorialLeft, .tutorialEnd .tutorialLeft {
     border:none;
     width:100%!important;
   }
@@ -891,10 +900,38 @@ video {
   .instructionsSubscribe {
     padding: 48px 40px;
   }
+  .navbar-container {
+    margin:40px 48px 0 40px;
+  }
+  .watchingTableItem {
+    padding:18px 0 18px 0px;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .watchingTableHead {
+    padding:0 20px 16px 0;
+    display: none;
+  }
+  .watchingTableItem p, .watchingTableHead p {
+    flex: 1 1 100%;
+  }
+  .watchingTableItem a, .watchingTableHead p:last-of-type {
+    padding: 0;
+    flex: 1 1 200px!important;
+  }
+  .watchingTableItem a > p{
+    display: none;
+  }
 }
 
 
 @media (max-width: 650px) {
+  .watchingTableItem p:last-of-type {
+    flex: 1 1 0px;
+  }
+  .watchingTableItem a {
+    flex: 1 1 auto!important;
+  }
   .accordionTitle p, .accordionTitle span {
     font-size:20px;
   }
@@ -916,6 +953,31 @@ video {
     height:auto;
     margin-top:16px;
   }
+  .tutorialHelp {flex-direction:column;}
+
+  .navbar-container {
+    flex-direction: column;
+  }
+  .navbar-middle, .navbar-right {
+    margin-top:24px;
+  }
+  .navbar-right {
+    height: 100%;
+  }
+  .navbar-right span {
+    padding: 15px 0;
+    width: 50%;
+    margin-left: auto;
+  }
+  .navbar-middle a {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 40px;
+    font-size: 18px;
+  }
+  .SubLeft p {
+    line-height: 115%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -929,5 +991,26 @@ video {
 
   .SubLeft span {
     font-size:18px!important;
+  }
+
+  .wmHeader {
+    flex-wrap: wrap;
+    margin: 0 24px;
+  }
+
+  .wmRight {
+    width:100%;
+    margin-top:24px;
+  }
+  .wmRight a {width:auto;}
+  .tutorialRight {
+    flex-direction: column;
+  }
+  .rulesAccordion, .accordionTitle {
+    padding: 0 24px;
+  }
+  .wmStream iframe {margin: 24px!important;}
+  .instructionsSubscribe {
+    margin: 0px 24px!important
   }
 }

@@ -123,7 +123,7 @@ async function data(){
                     <p>${stream.user_name}</p>
                     <p>${stream.type}</p>
                     <p>${stream.viewer_count}</p>
-                    <a href="https://twitch.tv/${stream.user_name}">Visit Channel <i class="material-icons">arrow_outward</i></a>
+                    <a href="https://twitch.tv/${stream.user_name}"><p>Visit Channel </p><i class="material-icons">arrow_outward</i></a>
                 </div>`
             )
         }
@@ -136,7 +136,7 @@ async function data(){
                     <p>${stream.display_name}</p>
                     <p>Not Live</p>
                     <p>N/A</p>
-                    <a href="https://twitch.tv/${stream.display_name}">Visit Channel <i class="material-icons">arrow_outward</i></a>
+                    <a href="https://twitch.tv/${stream.display_name}"><p>Visit Channel </p> <i class="material-icons">arrow_outward</i></a>
                 </div>`
             )
         }
