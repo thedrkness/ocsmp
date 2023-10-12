@@ -702,6 +702,10 @@ body {
 .watchingTableItem p, .watchingTableItem a {
     font-family: 'Joystix';
 }
+.watchingMobile {
+    display: none;
+    flex-direction: row;
+}
 
 .watchingTableItem a {
     display: flex;
@@ -984,13 +988,20 @@ video {
   }
   .watchingTableItem p, .watchingTableHead p {
     flex: 1 1 100%;
+    flex-direction: row;
+    display: flex;
   }
   .watchingTableItem a, .watchingTableHead p:last-of-type {
     padding: 0;
     flex: 1 1 200px!important;
   }
-  .watchingTableItem a > p{
-  }
+  .watchingMobile {
+    display: flex;
+    margin-left: 10px;
+    font-family: 'Joystix';
+    align-items: center;
+    justify-content: center;
+}
 }
 
 

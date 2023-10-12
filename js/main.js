@@ -122,7 +122,7 @@ async function data(){
                 `<div class="watchingTableItem">
                     <p>${stream.user_name}</p>
                     <p>${stream.type}</p>
-                    <p>${stream.viewer_count}</p>
+                    <p>${stream.viewer_count} <span class="watchingMobile">Viewers</span></p>
                     <a href="https://twitch.tv/${stream.user_name}"><p>Visit Channel </p><i class="material-icons">arrow_outward</i></a>
                 </div>`
             )
