@@ -149,6 +149,7 @@ body {
 
 .navbar-middle {
   border-radius: 100px;
+  margin-left: 132px;
   opacity: 0.85;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background: linear-gradient(114deg, #6100ff 42.5%, #2c0075 106.74%);
@@ -442,8 +443,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
   flex-direction: column;
-  border: 2px solid #ffffff00;
+  border: 2px solid #ffffff1c;
   cursor: pointer;
   opacity: 0.6;
   box-shadow: none;
@@ -922,6 +924,7 @@ video {
 }
 
 @media (max-width: 1100px) {
+  .navbar-middle {margin-left:0;}
   .wmStream iframe {
     width:100%;
     height:600px;
@@ -978,7 +981,7 @@ video {
     margin:40px 48px 0 40px;
   }
   .watchingTableItem {
-    padding:18px 0 18px 0px;
+    padding: 24px 0 24px 0px;
     flex-direction: column;
     align-items: normal;
   }
@@ -992,8 +995,9 @@ video {
     display: flex;
   }
   .watchingTableItem a, .watchingTableHead p:last-of-type {
-    padding: 0;
-    flex: 1 1 200px!important;
+    flex: 1 1 auto!important;
+    margin-bottom: 16px;
+    margin-top: 16px;
   }
   .watchingMobile {
     display: flex;
@@ -1090,7 +1094,7 @@ video {
   .rulesAccordion, .accordionTitle {
     padding: 0 24px;
   }
-  .wmStream iframe {margin: 24px!important;}
+  .wmStream iframe {margin: 24px!important;height: 285px;}
   .instructionsSubscribe {
     margin: 0px 24px!important
   }
