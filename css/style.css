@@ -150,6 +150,7 @@ body {
 .navbar-middle {
   border-radius: 100px;
   opacity: 0.85;
+  margin-left: 132px;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background: linear-gradient(114deg, #6100ff 42.5%, #2c0075 106.74%);
   box-shadow: none;
@@ -520,12 +521,6 @@ body {
   opacity: 1;
   transition: all 0.3s ease-in-out;
 }
-.dark2 {
-  background: #1210145e!important;
-  border-top: 1px solid #ffffff12;
-  border-bottom: 0!important;
-}
-
 
 .accordionContent {
   height:0;
@@ -959,6 +954,9 @@ video {
   .instructionsRight {
     width:100%;
     margin-top:24px;
+  }
+  .navbar-middle {
+    margin-left:0;
   }
 }
 
