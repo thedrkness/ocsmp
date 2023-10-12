@@ -114,7 +114,7 @@ async function data(){
     try {
         const streams = await fetch('https://ocrsmp-api-4978f3c8954d.herokuapp.com/streams')
             .then(res => res.json())
-    
+
         for(const stream of streams.online) {
             console.log(stream);
             watchingTableItems.insertAdjacentHTML(
