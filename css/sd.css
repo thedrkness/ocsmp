@@ -122,8 +122,9 @@ body {
 
 .navbar-container {
   display: flex;
-  margin: 32px 88px 32px 88px;
+  margin: 48px 88px 0 88px;
   justify-content: space-between;
+  z-index: 1;
   position: relative;
 }
 
@@ -140,15 +141,6 @@ body {
   border-radius: 8px;
   border: 1px solid rgba(255, 0, 0, 0.14);
   background: rgba(255, 0, 0, 0.04);
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #1a1424fa;
-  border-bottom: 1px solid #ffffff36;
-  backdrop-filter: blur(10px);
 }
 
 .navbar-logo {
@@ -209,7 +201,7 @@ body {
 
 .SubLeft p {
   display: flex;
-  font-size: 56px;
+  font-size: 60px;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 500;
@@ -241,7 +233,7 @@ body {
   font-size: 24px;
   opacity: 0.8;
   font-weight: 300;
-  max-width: 90%;
+  max-width: 88%;
   word-wrap:break-word;
   letter-spacing: 0.2px;
   line-height: 34px;
@@ -402,7 +394,7 @@ body {
     text-decoration: none;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
@@ -410,7 +402,6 @@ body {
 .tutorialRight i {
     font-size: 32px;
     padding: 5px 0;
-    justify-content: end;
 }
 
 .tutorialEnd {
@@ -546,7 +537,7 @@ body {
 
 .accordionItem.is-open .accordionContent {
   height: 100%;
-  margin: 24px 40px 40px 40px;
+  margin: 16px 40px 40px 40px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -799,7 +790,7 @@ video {
 #circle1 {
     position: absolute;
     width: 1397px;
-    bottom: 877px;
+    bottom: 5px;
     left: 250px;
 }
 
@@ -815,10 +806,6 @@ video {
     width: 1744px;
     bottom: 1926px;
     left: 117px;
-}
-
-.navcontainer {
-    z-index: 1;
 }
 
 .navbar-container, .rules-container, .instructions-container, .watching-container {
@@ -963,14 +950,17 @@ video {
   }
   .tutorialItem {
     flex-direction:column;
+    padding: 0 32px;
   }
   .tutorialLeft, .tutorialEnd .tutorialLeft {
     border:none;
     width:100%!important;
   }
   .tutorialRight a {
-    width: -webkit-fill-available;
-    margin:16px 0 40px 0;
+    width: 100%;
+    margin: 16px 0 40px 0;
+    padding: 20px 60px;
+    justify-content: space-between;
   }
   .instructionsMainHeader {
     flex-wrap:wrap;
@@ -990,7 +980,7 @@ video {
     padding: 48px 40px;
   }
   .navbar-container {
-    margin: 32px 48px 32px 48px;
+    margin:40px 48px 0 40px;
   }
   .watchingTableItem {
     padding: 24px 0 24px 0px;
@@ -1022,11 +1012,6 @@ video {
 
 
 @media (max-width: 650px) {
-  .sticky {
-    position:relative;
-    background:none;
-    border-bottom:none;
-  }
   .watchingTableItem p:last-of-type {
     flex: 1 1 0px;
   }

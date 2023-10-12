@@ -8,6 +8,21 @@ for (i=0; i<accordion.length; i++) {
 
 //
 
+window.onscroll = function() {myFunction()};
+
+var header = document.querySelector(".navcontainer");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+//
+
 window.addEventListener("load", () => {
     document.querySelector(".ipAddress").addEventListener("click", e => {
         navigator.clipboard.writeText("92.119.148.8:25565"); 
