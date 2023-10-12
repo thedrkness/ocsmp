@@ -442,9 +442,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
   flex-direction: column;
-  border: 2px solid #ffffff1c;
+  border: 2px solid #ffffff00;
   cursor: pointer;
   opacity: 0.6;
   box-shadow: none;
@@ -991,7 +990,6 @@ video {
     flex: 1 1 200px!important;
   }
   .watchingTableItem a > p{
-    display: none;
   }
 }
 
@@ -1002,6 +1000,7 @@ video {
   }
   .watchingTableItem a {
     flex: 1 1 auto!important;
+    padding: 0 20px;
   }
   .accordionTitle p, .accordionTitle span {
     font-size:20px;
