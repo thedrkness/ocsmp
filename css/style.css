@@ -85,6 +85,12 @@ body {
   opacity: 0.7;
 }
 
+.dark2 {
+  background: #12101452;
+  border-bottom: none;
+  border-top: 1px solid #ffffff12;
+}
+
 .header-dark p {
   color: #ffffff6b;
   margin: 0;
