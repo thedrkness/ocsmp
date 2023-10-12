@@ -10,7 +10,7 @@ for (i=0; i<accordion.length; i++) {
 
 window.addEventListener("load", () => {
     document.querySelector(".ipAddress").addEventListener("click", e => {
-        navigator.clipboard.writeText("39.99.3.11.02"); 
+        navigator.clipboard.writeText("92.119.148.8:25565"); 
     });
 });
 
