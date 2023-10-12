@@ -125,6 +125,7 @@ body {
   margin: 32px 88px 32px 88px;
   justify-content: space-between;
   position: relative;
+  -webkit-backface-visibility: hidden;
 }
 
 .navbar-header {
@@ -145,6 +146,7 @@ body {
 .sticky {
   position: fixed;
   top: 0;
+  -webkit-backface-visibility: hidden;
   width: 100%;
   background: #1a1424fa;
   border-bottom: 1px solid #ffffff36;
@@ -819,6 +821,7 @@ video {
 
 .navcontainer {
     z-index: 1;
+    -webkit-backface-visibility: hidden;
 }
 
 .navbar-container, .rules-container, .instructions-container, .watching-container {

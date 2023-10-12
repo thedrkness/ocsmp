@@ -8,16 +8,15 @@ for (i=0; i<accordion.length; i++) {
 
 //
 
-window.onscroll = function() {myFunction()};
+const navbar = document.querySelector(".navcontainer");
 
-var header = document.querySelector(".navcontainer");
-var sticky = header.offsetTop;
+const sticky = navbar.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
   } else {
-    header.classList.remove("sticky");
+    navbar.classList.remove("sticky");
   }
 }
 
