@@ -520,12 +520,12 @@ body {
   opacity: 1;
   transition: all 0.3s ease-in-out;
 }
-
 .dark2 {
   background: #1210145e!important;
   border-top: 1px solid #ffffff12;
   border-bottom: 0!important;
 }
+
 
 .accordionContent {
   height:0;
