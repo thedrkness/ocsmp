@@ -67,6 +67,37 @@ body {
   position: relative;
 }
 
+.snackbar {
+  display:none;
+  min-width: auto;
+  border: 2px solid #20af43;
+  border-radius: 100px;
+  color: #fff;
+  text-align: center;
+  background: #116a27f7;
+  padding: 18px 64px;
+  position: fixed;
+  bottom: 32px;
+  z-index: 1;
+  right: 0;
+  margin-right: 24px;
+}
+
+.show {
+  display:block;
+  animation: fadein 0.8s, fadeout 0.8s 2.5s;
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 32px; opacity: 1;}
+}
+
+@keyframes fadeout {
+  from {bottom: 32px; opacity: 1;}
+  to {bottom: 0; opacity: 0; display:none;}
+}
+
 /* Navigation */
 .header-dark {
   background: #121014;
@@ -1065,8 +1096,8 @@ video {
   .instructionsLeft p {font-size:40px;}
   .sticky {
     position:relative;
-    background:none;
-    border-bottom:none;
+    background: none!important;
+    border-bottom: none!important;
   }
   .watchingTableItem p:last-of-type {
     flex: 1 1 0px;
@@ -1090,6 +1121,7 @@ video {
   .tutorialLeft > p {
     margin-left:0;
     width:100%;
+    line-height: 147%;
   }
   .tutorialLeft img {
     width:100%;
@@ -1127,6 +1159,12 @@ video {
 }
 
 @media (max-width: 500px) {
+  .wmLeft {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   .accordionTitle {margin: 8px 0;}
   .accordionContent p > img {
     width: 24px;

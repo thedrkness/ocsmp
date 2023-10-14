@@ -23,10 +23,20 @@ function myFunction() {
 //
 
 window.addEventListener("load", () => {
-    document.querySelector(".ipAddress").addEventListener("click", e => {
-        navigator.clipboard.writeText("92.119.148.8:25565"); 
-    });
+  document.querySelector(".ipAddress").addEventListener("click", e => {
+      navigator.clipboard.writeText("92.119.148.8:25565"); 
+  });
 });
+
+function myLoad() {
+  x = document.querySelector(".snackbar");
+
+  x.classList.add("show");
+  
+  setTimeout(function(){ 
+    x.classList.remove("show"); }, 3000);
+}
+
 
 // Player Modal 
 
