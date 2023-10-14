@@ -13,8 +13,8 @@ const navbar = document.querySelector(".navcontainer");
 const sticky = navbar.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+  if ((window.pageYOffset) >= 50) {
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }

@@ -148,9 +148,10 @@ body {
   top: 0;
   -webkit-backface-visibility: hidden;
   width: 100%;
-  background: #1a1424fa;
-  border-bottom: 1px solid #ffffff36;
-  backdrop-filter: blur(10px);
+  background: #0b0a0e9e!important;
+  border-bottom: 2px solid #ffffff12!important;
+  backdrop-filter: blur(25px)!important;
+  transition: all 0.1s ease-in-out;
 }
 
 .navbar-logo {
@@ -159,13 +160,14 @@ body {
 
 .navbar-middle {
   border-radius: 100px;
-  margin-left: 132px;
+  /* margin-left: 132px; */
   opacity: 0.85;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background: linear-gradient(114deg, #6100ff 42.5%, #2c0075 106.74%);
   box-shadow: none;
   display: flex;
   transition: all 0.4s ease-in-out;
+  justify-content: center;
 }
 
 .navbar-middle a {
@@ -489,14 +491,19 @@ body {
 .accordionItem {
   border-radius: 10px;
   margin: 18px 0;
+  /* width: 100%; */
   padding: 0 40px;
   border: 2px solid rgb(255 255 255 / 31%);
   background: rgb(217 217 217 / 11%);
 }
 
+.accordionLeft, .accordionRight {
+    width: 100%;
+}
+
 .rulesAccordion {
   display: flex;
-  padding: 0 88px;
+  margin: 0 88px;
 }
 
 .rulesHeader {
@@ -834,7 +841,22 @@ video {
 
 .navcontainer {
     z-index: 1;
+    background: transparent;
     -webkit-backface-visibility: hidden;
+    backdrop-filter: none;
+    border-bottom: 1px solid transparent;
+    top: 0;
+}
+
+.navbar-middle a > span {
+    align-items: center;
+    display: flex;
+}
+
+.navbar-middle a > p {margin-top: 0;margin-bottom: 0;}
+
+.navbar-header, .navbar-middle, .navbar-right {
+    width: 250px;
 }
 
 .navbar-container, .rules-container, .instructions-container, .watching-container {
@@ -952,6 +974,9 @@ video {
 }
 
 @media (max-width: 1100px) {
+  .navbar-header, .navbar-middle, .navbar-right {
+    width: max-content;
+}
   .navbar-middle {margin-left:0;}
   .wmStream iframe {
     width:100%;
@@ -998,7 +1023,6 @@ video {
 }
 
 @media (max-width: 750px) {
-  .navbar-header {justify-content:center;}
   .instructions-header, .rulesHeader, .watchingHeader {
     font-size:56px!important;
   }
@@ -1038,6 +1062,7 @@ video {
 
 
 @media (max-width: 650px) {
+  .instructionsLeft p {font-size:40px;}
   .sticky {
     position:relative;
     background:none;
@@ -1075,9 +1100,12 @@ video {
 
   .navbar-container {
     flex-direction: column;
+    align-items: center;
+    margin: 32px 24px 0px 24px;
   }
   .navbar-middle, .navbar-right {
     margin-top:24px;
+    width: 100%;
   }
   .navbar-right {
     height: 100%;
@@ -1090,7 +1118,7 @@ video {
   .navbar-middle a {
     width: 100%;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 16px 40px;
     font-size: 18px;
   }
   .SubLeft p {
@@ -1108,7 +1136,7 @@ video {
 }
   .accordionItem {
     padding: 0 24px;
-    margin: 18px 32px;
+    margin: 18px 18px;
 }
   .instructions-header, .rulesHeader, .watchingHeader {
     font-size:32px!important;
@@ -1137,7 +1165,7 @@ video {
   }
   .rulesAccordion {
   padding: 0;
-  /* margin: 24px; */
+  margin: 0;
   }
   .wmStream iframe {margin: 24px!important;height: 285px;}
   .instructionsSubscribe {
