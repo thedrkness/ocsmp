@@ -489,15 +489,14 @@ body {
 .accordionItem {
   border-radius: 10px;
   margin: 18px 0;
+  padding: 0 40px;
   border: 2px solid rgb(255 255 255 / 31%);
   background: rgb(217 217 217 / 11%);
 }
 
 .rulesAccordion {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 0 126px 0 126px;
+  padding: 0 88px;
 }
 
 .rulesHeader {
@@ -511,11 +510,14 @@ body {
 
 .accordionTitle {
   position: relative;
-  padding: 0  40px;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+  margin: 16px 0;
+}
+
+.accordionRight {
+    margin-left: 8px;
 }
 
 
@@ -524,12 +526,16 @@ body {
   content: "keyboard_arrow_up";
   font-size: 82px;
   color: white;
+  transform: rotateZ(0deg);
   opacity: 0.5;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .accordionItem.is-open > .accordionTitle:after {
-  content: "keyboard_arrow_down";
   opacity: 1;
+  transform: rotateZ(180deg);
   transition: all 0.3s ease-in-out;
 }
 .dark2 {
@@ -540,16 +546,21 @@ body {
 
 
 .accordionContent {
-  height:0;
-  margin: 0 40px 0 40px;
   overflow:hidden;
-  transition: all 0.2s ease-in-out;
+  position: absolute;
+  margin: 24px 0 24px 0;
+  opacity: 0;
+  transition: opacity 0s;
+  transition: overflow 0.4s ease-in-out;
 }
 
 .accordionItem.is-open .accordionContent {
+  position: relative;
+  margin: 24px 0 24px 0;
   height: 100%;
-  margin: 24px 40px 40px 40px;
-  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  transition: opacity 0s;
+  transition: overflow 0.4s ease-in-out;
 }
 
 .accordionContent p:first-of-type {
@@ -562,19 +573,20 @@ body {
     font-family: 'Joystix';
     font-size: 24px;
     line-height: 138%;
-    color: #ffffffd9;
-    margin: 32px 0;
-    letter-spacing: -0.3px;
+    color: #ffffff;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .accordionTitle span {
     color: #ff2424;
 }
 
-.accordionItem.is-open .accordionContent p {
+.accordionItem.is-open  .accordionContent p {
     opacity: 1;
-    overflow: visible;
-    height: 100%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -583,19 +595,20 @@ body {
     opacity: 0;
     display: flex;
     margin-top: 40px;
+    align-items: center;
     font-weight: 100;
-    margin-bottom: 0;
+    letter-spacing: 0.3px;
     color: white;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
 
 .accordionContent p > img {
-  margin-right: 16px;
+  display: none;
 }
 
 .accordionLeft {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 
@@ -917,8 +930,8 @@ video {
     flex-direction:column;
     padding: 0 40px;
   }
-  .accordionLeft {
-    margin-right:0;
+  .accordionLeft, .accordionRight {
+    margin: 0;
   }
   .accordionRight .accordionItem:first-of-type {
     margin-top:0;
@@ -1038,7 +1051,7 @@ video {
     padding: 0 20px;
   }
   .accordionTitle p, .accordionTitle span {
-    font-size:20px;
+    font-size: 18px;
   }
   .instructions-header, .rulesHeader, .watchingHeader {
     font-size:40px!important;
@@ -1086,6 +1099,17 @@ video {
 }
 
 @media (max-width: 500px) {
+  .accordionTitle {margin: 8px 0;}
+  .accordionContent p > img {
+    width: 24px;
+}
+  .accordionContent p {
+    font-size: 18px;
+}
+  .accordionItem {
+    padding: 0 24px;
+    margin: 18px 32px;
+}
   .instructions-header, .rulesHeader, .watchingHeader {
     font-size:32px!important;
   }
@@ -1111,8 +1135,9 @@ video {
   .tutorialRight {
     flex-direction: column;
   }
-  .rulesAccordion, .accordionTitle {
-    padding: 0 24px;
+  .rulesAccordion {
+  padding: 0;
+  /* margin: 24px; */
   }
   .wmStream iframe {margin: 24px!important;height: 285px;}
   .instructionsSubscribe {
